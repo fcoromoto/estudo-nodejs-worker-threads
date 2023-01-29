@@ -1,0 +1,39 @@
+### GET non-blocking
+GET http://localhost:3000/non-blocking
+Accept: application/json
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+### GET v1/blocking
+GET http://localhost:3000/blocking
+Accept: application/json
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+### GET v2/blocking
+GET http://localhost:3000/v2/blocking
+Accept: application/json
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+### GET v3/blocking
+GET http://localhost:3000/v3/blocking
+Accept: application/json
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
